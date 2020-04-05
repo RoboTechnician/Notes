@@ -3,9 +3,10 @@
 namespace Notes.Models
 {
     /// <summary>
-    /// Context for Notes DB. It has 2 tables: users and notes.
+    /// Context for Notes DB on PostgreSQL. It has 2 tables: users and notes.
     /// Users: id, email, name, password, salt. Notes: id, title, text, userId.
     /// </summary>
+    // Connection string in appsettings.json: ConnectionStrings.NotesDatabase
     public partial class NotesContext : DbContext
     {
         public NotesContext(DbContextOptions<NotesContext> options)
