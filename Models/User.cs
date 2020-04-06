@@ -22,6 +22,10 @@ namespace Notes.Models
         /// </summary>
         public const int PasswordLength = 64;
         /// <summary>
+        /// Password min length
+        /// </summary>
+        public const int PasswordMinLength = 6;
+        /// <summary>
         /// Crypted password max length
         /// </summary>
         public const int CryptPasswordLength = 16;

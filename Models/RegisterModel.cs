@@ -39,7 +39,7 @@ namespace Notes.Models
             }
             else if (Email.Length > User.EmailLength)
             {
-                err.Email = "Email is too long";
+                err.Email = "Email is too long, maximum " + User.EmailLength.ToString();
                 return false;
             }
             else if (!IsValidEmail(Email))
@@ -68,12 +68,12 @@ namespace Notes.Models
             }
             else if (Password.Length >= User.PasswordLength)
             {
-                err.Password = "Password is too long";
+                err.Password = "Password is too long, maximum " + User.PasswordLength.ToString();
                 return false;
             }
-            else if (Password.Length < 6)
+            else if (Password.Length < User.PasswordMinLength)
             {
-                err.Password = "Password is too short";
+                err.Password = "Password is too short, minimum " + User.PasswordMinLength.ToString();
                 return false;
             }
 

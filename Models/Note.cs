@@ -18,7 +18,7 @@ namespace Notes.Models
         {
             if (Title.Length > TitleLength)
             {
-                err.Title = "Title is too long";
+                err.Title = "Title is too long, maximum " + TitleLength.ToString();
                 return false;
             }
 
@@ -37,7 +37,7 @@ namespace Notes.Models
             }
             else if (Text.Length > TextLength)
             {
-                err.Text = "Text is too long";
+                err.Text = "Text is too long, maximum " + TextLength.ToString();
                 return false;
             }
 
